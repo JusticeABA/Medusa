@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb2d.linearVelocity = new Vector2(moveInput.x * 5, rb2d.linearVelocity.y);
+        rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, moveInput.y * 5);
     }
 
     public void Move(InputAction.CallbackContext context)
